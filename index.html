@@ -6,6 +6,9 @@
 
   <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
   <link rel="stylesheet" href="stilus.css">
+  <py-env>
+        - time
+   </py-env>
 </head>
 
 <body>
@@ -19,6 +22,7 @@
 from js import console
 
 def my_function():
+    time.sleep(15)
     #print('args:', args)
     #print('kwargs:', kwargs)
     #console.log(f'args: {args}')
@@ -34,11 +38,11 @@ def my_function():
     pyscript.write('test-output', text)
 
     return text
-
+    time.sleep(10)
 p = my_function()
 print(f"IP cim: {p}")
 
-
+time.sleep(10)
 print("IP cim bináris alakja: ")
 
 g = p.split(".")
